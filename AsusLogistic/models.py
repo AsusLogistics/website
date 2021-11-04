@@ -9,4 +9,3 @@ from django.shortcuts import reverse
 class Customer(models.Model):
     email = models.CharField(max_length=200, null=True)
     name = models.CharField(max_length=200, null=True)
-    
