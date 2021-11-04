@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASUS Logisitics Offer!</title>
+  <link rel="shortcut icon" href="{% static 'media/favicon.png' %}" type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts/icon-font/css/style.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts/typography-font/typo.css' %}">
+  <link rel="stylesheet" href="{% static '/fonts/fontawesome-5/css/all.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="{% static '/plugins/aos/aos.min.css' %}">
+  <!-- Vendor stylesheets  -->
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <!-- Custom stylesheet -->
+</head>
+
+<body data-theme-mode-panel-active data-theme="light" style="font-family: 'Mazzard H';">
+  <div class="site-wrapper overflow-hidden position-relative">
+    <!-- Site Header -->
+    <!-- Preloader -->
+    <!-- <div id="loading">
+    <div class="preloader">
+    <img src="./image/preloader.gif" alt="preloader">
+  </div>
+</div>    -->
+<!--Site Header Area -->
+<header class="site-header site-header--menu-right landing-14-menu site-header--absolute site-header--sticky">
+  <div class="container">
+    <nav class="navbar site-navbar">
+      <!-- Brand Logo-->
+      <div class="brand-logo">
+        <a href="#">
+          <!-- light version logo (logo must be black)-->
+          <img src="{% static 'media/logo.png' %}" height ="70px" alt="" class="light-version-logo">
+          <!-- Dark version logo (logo must be White)-->
+          <img src="{% static 'media/logo-white.png' %}" alt="" class="dark-version-logo">
+        </a>
+      </div>
+      <div class="menu-block-wrapper">
+        <div class="menu-overlay"></div>
+        <nav class="menu-block" id="append-menu-header">
+          <div class="mobile-menu-head">
+            <div class="go-back">
+              <i class="fa fa-angle-left"></i>
+            </div>
+            <div class="current-menu-title"></div>
+            <div class="mobile-menu-close">&times;</div>
+          </div>
+          <ul class="site-menu-main">
+            <li class="nav-item nav-item-has-children">
+              <a href="#" class="nav-link-item drop-trigger">Our Website<i class="fas fa-angle-down"></i>
+              </a>
+              <ul class="sub-menu" id="submenu-9">
+                <li class="sub-menu--item">
+                  <a target="_blank" href="https://asuslogistics.com/about-us/">About Us</a>
+                </li>
+                <li class="sub-menu--item">
+                  <a target="_blank" href="https://asuslogistics.com/#howitworks">How It Works</a>
+                </li>
+                <li class="sub-menu--item">
+                  <a target="_blank" href="https://asuslogistics.com/#areaswecover">Areas We Cover</a>
+                </li>
+                <li class="sub-menu--item">
+                  <a target="_blank" href="https://asuslogistics.com/help/">FAQ</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" href="https://www.trustpilot.com/review/asuslogistics.com" class="nav-link-item">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link-item">Support</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-btn header-btn-l-14 ms-auto d-none d-xs-inline-flex">
+        <a target="_blank" class="btn btn trail-btn focus-reset" href="#">
+
+
+          Start my subscription
+        </a>
+      </div>
+      <!-- mobile menu trigger -->
+      <div class="mobile-menu-trigger">
+        <span></span>
+      </div>
+      <!--/.Mobile Menu Hamburger Ends-->
+    </nav>
+  </div>
+</header>
+<!-- navbar- -->
+<!-- Hero Area -->
+<div class="hero-area-l-14 position-relative z-index-1 overflow-hidden">
+  <div class="container">
+    <div class="row position-relative justify-content-center">
+      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 pr-0 " data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+        <div class="content">
+          <h1>UK's first delivery subscription service for £49.99</h1>
+          <p> Deliver anything anywhere in the UK. Cancel at anytime. Unlimted deliveries. Ready to deliver goods?</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="rashad@hotmail.co.uk">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="£49.99 subscription">
+            <input type="hidden" name="amount" value="49.99">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+            <input type="submit" class="btn focus-reset" value= "Subscribe Now £49.99" >
+
+          </form>
+          <!--  <a onclick="openForm()" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" class="btn focus-reset">Subscribe Now £49.99</a> -->
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-5 col-md-8 " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+        <div class="banner-image-l-14">
+          <img src="{% static 'media/hero-img.png' %}" alt="" class="w-100 mt-xl-n10">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-shape-14"></div>
+</div>
+<!-- Brand-area -->
+<div class="brand-area-l-14">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h4>Our customers are</h4>
+      </div>
+    </div>
+    <div class="row img-grayscale">
+      <div class="col-lg-12">
+        <div class="brand-area-l-14-items d-flex justify-content-center justify-content-xl-between align-items-center flex-wrap ">
+          <div class="single-brand " data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+            <img src="{% static 'svg/brand-logo.svg' %}"lt="">
+          </div>
+          <div class="single-brand " data-aos="fade-right" data-aos-duration="700" data-aos-once="true">
+            <img src="{% static 'svg/brand-logo-1.svg' %}" alt="">
+          </div>
+          <div class="single-brand " data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
+            <img src="{% static 'svg/brand-logo-2.svg' %}" alt="">
+          </div>
+          <div class="single-brand " data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+            <img src="{% static 'svg/brand-logo-3.svg' %}" alt="">
+          </div>
+          <div class="single-brand " data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
+            <img src="{% static 'svg/brand-logo-4.svg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="brand-aarea-border-l14"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content-Area-1 -->
+<div class="content-area-l-14-1 position-relative">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10 order-lg-1 order-1" data-aos="fade-right" data-aos-duration="1200" data-aos-once="true">
+        <div class="h-100 section-heading-8 content text-lg-start text-center">
+          <h2>How This All Works! </h2>
+          <p> Deliver anything anywhere in the UK. Cancel at anytime. Unlimted deliveries. Ready to deliver goods?</p>
+          <a href="#" class="btn focus-reset">
+            Learn More!
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="offset-xl-2 col-xl-6 col-lg-6 col-md-8 pl-xl-11 order-lg-1 order-0" data-aos="fade-left" data-aos-duration="1200" data-aos-once="true">
+        <div class="content-img">
+          <img src="{% static 'media/content-img-1.png' %}" alt="" class="w-100 w-xl-auto">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content-Area-2 -->
+<div class="content-area-l-14-2">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-6 col-md-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+        <div class="content-img pr-lg-13">
+          <img src="{% static 'media/content-img-2.png' %}" alt="" class="w-100">
+        </div>
+      </div>
+      <div class="col-xl-4 offset-xl-2 col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+        <div class="content section-heading-8 text-lg-start text-center">
+          <h2>
+            Items We Dont Accept
+          </h2>
+          <p> There are certain items we dont accept to deliver. For example, firearms, gas bottles, petrol powered tools, goods longer than 3.6m long etc.
+            If you feel your item is at risk of rejection then call us on 01213140348 </p>
+
+            <a href="#" class="btn focus-reset">
+              Learn More!
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Feature Area -->
+  <div class="features-area-l-14">
+    <div class="container bg-shape-img-2 position-relative">
+      <div class="row features-area-l-14 justify-content-center mx-0">
+        <div class="col-lg-6 col-md-8 col-sm-10 px-lg-6" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+          <div class="content-area  d-flex">
+            <div class="circle-85 hover-icon">
+              <img src="{% static 'media/f-icon-1.png' %}" alt="">
+            </div>
+            <div class="content-body pl-sm-14 pl-5">
+              <h5>
+                Hassle free</h5>
+                <p class="mb-0">
+                  Event is not like most tech conferences.
+                  We want our presentations to engage the audience, spark discussion and inspire new ideas.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+            <div class="content-area  d-flex ">
+              <div class="circle-85 hover-icon">
+                <img src="{% static 'media/f-icon-2.png' %}" alt="">
+              </div>
+              <div class="content-body">
+                <h5>
+                  Unlimitied delivery</h5>
+                  <p class="mb-0">
+                    Event is not like most tech conferences.
+                    We want our presentations to engage the audience, and inspire new ideas.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-10" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                <div class="content-area  d-flex ">
+                  <!-- circle-85 start -->
+                  <div class="circle-85 hover-icon">
+                    <img src="{% static 'media/f-icon-3.png' %}" alt="">
+                  </div>
+                  <div class="content-body">
+                    <h5>
+                      Cancel anytime!</h5>
+                      <p class="mb-0">
+                        Event is not like most tech conferences.
+                        We want our presentations to engage the audience.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                    <div class="content-area  d-flex ">
+                      <div class="circle-85  hover-icon">
+                        <img src="{% static 'media/f-icon-4.png' %}" alt="" />
+                      </div>
+                      <div class="content-body">
+                        <h5>
+                          We deliver 3-7 working days</h5>
+                          <p class="mb-0">
+                            Event is not like most tech conferences.
+                            We want our presentations to engage the audience, spark discussion and inspire new ideas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Content-Area-3 -->
+              <div class="content-area-l-14-2">
+                <div class="container">
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+                      <div class="content-img pr-lg-13">
+                        <img src="{% static 'media/content-img-2.png' %}" alt="" class="w-100">
+                      </div>
+                    </div>
+                    <div class="col-xl-4 offset-xl-2 col-lg-6 col-md-8 col-sm-10" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+                      <div class="content section-heading-8 text-lg-start text-center">
+                        <h2>
+                          Items We Dont Accept
+                        </h2>
+                        <p> There are certain items we dont accept to deliver. For example, firearms, gas bottles, petrol powered tools, goods longer than 3.6m long etc.
+                          If you feel your item is at risk of rejection then call us on 01213140348 </p>
+
+                          <a href="#" class="btn focus-reset">
+                            Learn More!
+                            <i class="fas fa-angle-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <!-- Pricing-area section -->
+              <form>
+                <div class="form-popup" id="myForm">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Password</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputState">State</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputZip">Zip</label>
+                      <input type="text" class="form-control" id="inputZip">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Check me out
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+              <!-- CTA Area -->
+              <div class="cta-area-l-14">
+                <div class="container position-relative">
+                  <div class="bg-shape-img-3"></div>
+                  <div class="row cta-area-l-14-content justify-content-center text-lg-start text-center">
+                    <div class="col-lg-6">
+                      <div class="cta-content">
+                        <h2 class="text-white">Ready to get started?</h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 text-lg-end text-center">
+                      <a class="btn" href="#">Start Free Trial</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Footer Area -->
+              <footer class="footer-area-l-12 position-relative">
+
+              </footer>
+            </div>
+            <!-- Vendor Scripts -->
+            <script src="{% static 'js/vendor.min.js' %}"></script>
+            <script src="{% static 'js/aos.min.js' %}"></script>
+            <script src="{% static 'js/menu.js' %}"></script>
+            <!-- Activation Script -->
+            <script src="{% static 'js/custom.js ' %}"></script>
+          </body>
+
+          </html>
