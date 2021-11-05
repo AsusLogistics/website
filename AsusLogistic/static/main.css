@@ -2097,7 +2097,7 @@ li.sub-menu--item.nav-item-has-children i {
 }
 
 .hero-area-l-14 .bg-shape-14 {
-  background: url("{% static 'svg/hero-bg.svg' %}");
+  background: url("../static/svg/hero-bg.svg");
   background-repeat: no-repeat;
   position: absolute;
   top: 0px;
@@ -2337,7 +2337,7 @@ li.sub-menu--item.nav-item-has-children i {
 
 @media (min-width: 992px) {
   .features-area-l-14 .bg-shape-img-2 {
-    background: url("{% static 'media/features-bg.png' %})";
+    background: url("../static/media/features-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -2770,7 +2770,7 @@ li.sub-menu--item.nav-item-has-children i {
 
 @media (min-width: 992px) {
   .cta-area-l-14 .bg-shape-img-3 {
-    background: url("{% static 'media/cta-bg.png' %})";
+    background: url("../static/media/cta-bg.png");
   }
 }
 
