@@ -110,20 +110,27 @@
         <div class="content">
           <h1>UK's first delivery subscription service for £49.99</h1>
           <p> Deliver anything anywhere in the UK. Cancel at anytime. Unlimted deliveries. Ready to deliver goods?</p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="rashad@hotmail.co.uk">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="£49.99 subscription">
-            <input type="hidden" name="amount" value="49.99">
-            <input type="hidden" name="currency_code" value="GBP">
-            <input type="hidden" name="button_subtype" value="services">
-            <input type="hidden" name="no_note" value="0">
-            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-            <input type="submit" class="btn focus-reset" value= "Subscribe Now £49.99" >
-
-          </form>
-          <!--  <a onclick="openForm()" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" class="btn focus-reset">Subscribe Now £49.99</a> -->
+		  <div id="paypal-button-container-P-19573805F0426720DMGCRGCA"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AWlIKLFcsj7QMymSSij9gwC96-K5M6hjO-Rek0xe6I5yBr3lv76lLkiMzE8Kv4uB7XkIuiDnhhparNWy&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-19573805F0426720DMGCRGCA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-19573805F0426720DMGCRGCA'); // Renders the PayPal button
+</script>
         </div>
       </div>
       <div class="col-xl-7 col-lg-5 col-md-8 " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
