@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<body>
+
+<h2>Book a Job</h2>
+
+<form action="{% url 'Landing Page' %}" method="POST">
+{% csrf_token %}
+{{ form }}
+  <label for="Item_name">Item Name:</label><br>
+  <input type="text" id="Item_name" name="{{ item_name }}"><br>
+  <label for="Item_width">Item Width:</label><br>
+  <input type="text" id="Item_width" name="{{ item_width }}"><br>
+   <label for="Item_width">Item Length:</label><br>
+  <input type="text" id="Item_length" name="{{ item_length }}"><br>
+   <label for="Item_height">Item Height:</label><br>
+  <input type="text" id="Item_height" name="{{ item_height }}"><br>
+  <br>
+  <h2> Collection Address </h2>
+  <label for="Item_name">Address line 1:</label><br>
+    <input type="text" id="Address_line" name="{{ address }}"><br>
+	  <label for="Item_name">Town:</label><br>
+    <input type="text" id="Town" name="{{ town }}"><br>
+	<label for="Item_name">County:</label><br>
+    <input type="text" id="County" name="{{ county }}"><br>
+	<label for="Item_name">Postcode:</label><br>
+    <input type="text" id="Postcode" name="{{ postcode }}"><br>
+	
+	<h2> Delivery Address </h2>
+  <label for="Item_name">Address line 1:</label><br>
+    <input type="text" id="Address_line" name="Address_line"><br>
+	  <label for="Item_name">Town:</label><br>
+    <input type="text" id="Town" name="Town"><br>
+	<label for="Item_name">County:</label><br>
+    <input type="text" id="County" name="County"><br>
+	<label for="Item_name">Postcode:</label><br>
+    <input type="text" id="Postcode" name="Post Code"><br>
+	
+	<h2> Receiver details </h2>
+	<label for="Item_name">Receiver Name:</label><br>
+  <input type="text" id="Item_name" name="Item_name"><br>
+  <label for="Item_width">Receiver phone:</label><br>
+  <input type="text" id="Item_width" name="Item_width"><br>
+    <label for="Item_width">Receiver email:</label><br>
+  <input type="text" id="Item_width" name="Item_width"><br>
+  
+    <input type="submit" value="Book now">
+
+
+</form>
+
+</body>
+</html>
