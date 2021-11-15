@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'AsusLogistic.apps.AsuslogisticConfig',
     'phonenumber_field',
-    'phone_field',
 ]
 
 MIDDLEWARE = [
