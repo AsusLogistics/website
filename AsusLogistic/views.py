@@ -13,7 +13,6 @@ def Booking_Page(request):
     form = BookingForm(request.POST)
     # check whether it's valid:
     if form.is_valid():
-        #variable
         customer = form.save(commit=False)
         customer.is_active = False
         form.save()
