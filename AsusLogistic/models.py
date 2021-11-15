@@ -5,15 +5,6 @@ from django.shortcuts import reverse
 from phonenumber_field.modelfields import PhoneNumberField
 from django.forms import ModelForm
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 4641f42... form works just won't save to database
-=======
->>>>>>> parent of 4641f42... form works just won't save to database
-
 # Create your models here.
 class Item(models.Model):
     id = models.AutoField(primary_key=True)
