@@ -9,9 +9,6 @@ def Landing_Page(request):
     return render(request, 'Landing Page.html')
 
 def Booking_Page(request):
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     # create a form instance and populate it with data from the request:
     form = BookingForm(request.POST)
     # check whether it's valid:
@@ -24,12 +21,6 @@ def Booking_Page(request):
         # redirect to a new URL:
         return HttpResponseRedirect('Landing Page')
 
-=======
-=======
->>>>>>> parent of 4641f42... form works just won't save to database
-=======
->>>>>>> parent of 4641f42... form works just won't save to database
-
 # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -40,10 +31,9 @@ def Booking_Page(request):
             # ...
             # redirect to a new URL:
             return HttpResponseRedirect('Landing Page')
-            
+
         # if a GET (or any other method) we'll create a blank form
     else:
         form = BookingForm()
         
->>>>>>> parent of 4641f42... form works just won't save to database
     return render(request, 'Booking.html', {'form': form})
