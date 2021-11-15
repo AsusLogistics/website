@@ -6,6 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Item(models.Model):
     id = models.AutoField(primary_key=True)
@@ -20,13 +21,13 @@ class Item(models.Model):
 
     def __str__(self):
         return self.item_name
-    
+
     def __str__(self):
         return self.item_width
-    
+
     def __str__(self):
         return self.item_height
-    
+
     def __str__(self):
         return self.item_length
 

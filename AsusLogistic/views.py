@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, JsonResponse, FileResponse, Http40
 # Create your views here.
 def Landing_Page(request):
     return render(request, 'Landing Page.html')
-    
+
 def Booking_Page(request):
     # create a form instance and populate it with data from the request:
     form = BookingForm(request.POST)
@@ -21,5 +21,5 @@ def Booking_Page(request):
         item_name = form.cleaned_data.get('item_name').lower()
         # redirect to a new URL:
         return HttpResponseRedirect('Landing Page')
-        
+
     return render(request, 'Booking.html', {'form': form})
