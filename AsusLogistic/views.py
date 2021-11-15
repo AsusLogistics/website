@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 from .forms import *
 from django import forms
-from django.http import HttpResponse, JsonResponse, FileResponse, Http404
+from django.http import HttpResponseRedirect, JsonResponse, FileResponse, Http404
 
 # Create your views here.
 def Landing_Page(request):
