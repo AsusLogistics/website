@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<body>
+
+<h2>Book a Job</h2>
+
+<form action="{% url 'Landing Page' %}" method="POST">
+{% csrf_token %}
+{{ form }}
+  
+<input type="submit" value="Book now">
+
+
+</form>
+
+</body>
+</html>
