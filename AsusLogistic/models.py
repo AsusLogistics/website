@@ -7,7 +7,10 @@ from django.forms import ModelForm
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 4641f42... form works just won't save to database
 =======
 >>>>>>> parent of 4641f42... form works just won't save to database
 
