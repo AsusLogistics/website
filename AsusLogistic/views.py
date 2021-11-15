@@ -10,6 +10,7 @@ def Landing_Page(request):
 
 def Booking_Page(request):
 <<<<<<< HEAD
+<<<<<<< HEAD
     # create a form instance and populate it with data from the request:
     form = BookingForm(request.POST)
     # check whether it's valid:
@@ -23,6 +24,8 @@ def Booking_Page(request):
         return HttpResponseRedirect('Landing Page')
 
 =======
+=======
+>>>>>>> parent of 4641f42... form works just won't save to database
 
 # if this is a POST request we need to process the form data
     if request.method == 'POST':
