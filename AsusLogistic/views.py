@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from .forms import *
-from shapeshifter.views import MultiFormView
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 def Landing_Page(request):
@@ -24,23 +24,27 @@ def Booking_Page(request):
         return HttpResponseRedirect('Landing Page')
 
 context = {
-    'ItemForm': ItemForm(),
+    'DeliveryForm': DeliveryForm(),
     'SenderForm': SenderForm()
 }
 
 def Booking_Page(request):
     if request.method == "POST":
-        form = ItemForm(request.POST or None)
+        form = DeliveryForm(request.POST or None)
         if form.is_valid():
-            obj = Item() #gets new object
+            obj = Delivery() #gets new object
+            obj.customer = obj.customer = form.cleaned_data['customer']
+            obj.customer_email = obj.customer_email = form.cleaned_data['customer_email']
+            obj.customer_phone_number = obj.customer_phone_number = form.cleaned_data['customer_phone_number']
             obj.item_name = form.cleaned_data['item_name']
             obj.item_width = form.cleaned_data['item_width']
             obj.item_height = form.cleaned_data['item_height']
             obj.item_length = form.cleaned_data['item_length']
             #finally save the object in db
             obj.save()
+        return HttpResponseRedirect('/')
     else:
-        form = ItemForm()
+        form = DeliveryForm()
     return render(request, "Booking.html", context)
 
 def Sender_details(request):

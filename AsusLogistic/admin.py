@@ -6,14 +6,6 @@ class AsusManagement(admin.ModelAdmin):
     pass
 admin.site.register(Sender, AsusManagement)
 
-class ItemManagement(admin.ModelAdmin):
-    pass
-admin.site.register(Item, AsusManagement)
-
-class ReceiverManagement(admin.ModelAdmin):
-    pass
-admin.site.register(Receiver, AsusManagement)
-
 class DeliveryManagement(admin.ModelAdmin):
     pass
 admin.site.register(Delivery, AsusManagement)
