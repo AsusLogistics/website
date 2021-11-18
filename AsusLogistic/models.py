@@ -1,14 +1,32 @@
 from django.db import models
 from django.conf import settings
-from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
-class Item(models.Model):
+class Sender(models.Model):
     id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200, null=True)
+    phone_number =  models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.name
+
+    def __str__(self):
+        return self.email
+
+    def __str__(self):
+        return self.phone_number
+
+class Delivery(models.Model):
+    id = models.AutoField(primary_key=True)
+    customer = models.CharField(max_length=200, null=True)
+    customer_email = models.CharField(max_length=200, null=True)
+    customer_phone_number = models.CharField(max_length=200, null=True)
     item_name = models.CharField(max_length=200, null=True)
     item_width = models.CharField(max_length=200, null=True)
     item_height = models.CharField(max_length=200, null=True)
     item_length = models.CharField(max_length=200, null=True)
+    sender_ID = models.ForeignKey(Sender, default=None, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.item_name
@@ -22,26 +40,14 @@ class Item(models.Model):
     def __str__(self):
         return self.item_length
 
-class Sender(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=200, null=True)
-    email = models.CharField(max_length=200, null=True)
-    phone_number = PhoneNumberField(unique = True, null = False, blank = False)
+    def __str__(self):
+        return self.customer_email
 
     def __str__(self):
-        return self.name
-
+        return self.customer_phone_number
+    
     def __str__(self):
-        return self.email
-
-    def __str__(self):
-        return self.phone_number
-
-class Receiver(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=200, null=True)
-    email = models.CharField(max_length=200, null=True)
-    phoneNumber = PhoneNumberField(unique = True, null = False, blank = False)
+        return self.customer
 
 class CollectPoint(models.Model):
     id = models.AutoField(primary_key=True)
@@ -56,9 +62,3 @@ class Drop(models.Model):
     town = models.CharField(max_length=200, null=True)
     county = models.CharField(max_length=200, null=True)
     postcode = models.CharField(max_length=200, null=True)
-
-class Delivery(models.Model):
-    collect_ID = models.ForeignKey(CollectPoint, default=None, on_delete=models.CASCADE)
-    drop_ID = models.ForeignKey(Drop, default=None, on_delete=models.CASCADE)
-    receiver_ID = models.ForeignKey(Receiver, default=None, on_delete=models.CASCADE)
-    sender_ID = models.ForeignKey(Sender, default=None, on_delete=models.CASCADE)
