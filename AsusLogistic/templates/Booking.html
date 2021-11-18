@@ -7,7 +7,7 @@
 {% block content %}
 <form action="{% url 'Booking' %}" method="POST">
 {% csrf_token %}
-{{ ReceiverForm.as_p }}
+{{ DeliveryForm.as_p }}
 <input type="submit" value="Book now">
 </form>
 {% endblock %}
