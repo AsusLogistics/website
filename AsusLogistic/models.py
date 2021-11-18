@@ -8,46 +8,33 @@ class Sender(models.Model):
     email = models.CharField(max_length=200, null=True)
     phone_number =  models.CharField(max_length=200, null=True)
 
+    def publish(self):
+        self.save()
+
     def __str__(self):
         return self.name
 
-    def __str__(self):
-        return self.email
-
-    def __str__(self):
-        return self.phone_number
-
 class Delivery(models.Model):
     id = models.AutoField(primary_key=True)
-    customer = models.CharField(max_length=200, null=True)
+    first_name = models.CharField(max_length=200, null=True)
+    last_name = models.CharField(max_length=200, null=True)
+    customer_address = models.CharField(max_length=200, null=True)
     customer_email = models.CharField(max_length=200, null=True)
     customer_phone_number = models.CharField(max_length=200, null=True)
+    city = models.CharField(max_length=200, null=True)
+    postcode = models.CharField(max_length=200, null=True)
+    county = models.CharField(max_length=200, null=True)
     item_name = models.CharField(max_length=200, null=True)
     item_width = models.CharField(max_length=200, null=True)
     item_height = models.CharField(max_length=200, null=True)
     item_length = models.CharField(max_length=200, null=True)
-    sender_ID = models.ForeignKey(Sender, default=None, on_delete=models.CASCADE)
+    sender_ID = models.ForeignKey(Sender, default=None, null=True, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.item_name
-
-    def __str__(self):
-        return self.item_width
-
-    def __str__(self):
-        return self.item_height
-
-    def __str__(self):
-        return self.item_length
-
-    def __str__(self):
-        return self.customer_email
-
-    def __str__(self):
-        return self.customer_phone_number
+    def publish(self):
+        self.save()
     
     def __str__(self):
-        return self.customer
+        return self.first_name
 
 class CollectPoint(models.Model):
     id = models.AutoField(primary_key=True)

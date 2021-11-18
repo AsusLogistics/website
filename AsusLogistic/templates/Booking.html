@@ -262,7 +262,7 @@ ul li:hover{
 <hr />
 
 <div class="testbox">
-    <form action {% url 'Booking' %} method="POST">
+  <form action="{% url 'Booking' %}" method="POST">
       {% csrf_token %}
       <div class="banner">
         <h1>Booking A Delivery</h1>
@@ -273,28 +273,20 @@ ul li:hover{
         <legend>Item Description </legend>
           <div class="item">
           <label for="instruction">What is the Item? e.g. chair, washing machine...</label>
-          <textarea id="instruction" rows="3"></textarea>
+          <textarea id="instruction" rows="3" name="item_name"></textarea>
           </div>
           <label for="instruction">Item Dimensions e.g. Height, Width, and Length</label>
           <div class="row">
             <div class="column">
-              <p>
-                hello
-                </p>
+              <input type="text" placeholder="Width "name="item_width"/>
             </div>
 
               <div class="column">
-
-                <p>
-                  hello
-                  </p>
+                <input type="text" placeholder="Height " name="item_height"/>
             </div>
 
             <div class="column">
-
-              <p>
-                hello
-                </p>
+              <input type="text" placeholder="Length " name="item_length"/>
             </div>
           </div>
       </fieldset>
@@ -304,36 +296,146 @@ ul li:hover{
         <div class="columns">
           <div class="item">
             <label for="fname">Name<span>*</span></label>
-            {{obj.customer}}
-            <input id="fname" type="text" name="fname" />
+            <input id="fname" type="text" name="name" />
           </div>
           <div class="item">
             <label for="lname"> Last Name<span>*</span></label>
-            <input id="lname" type="text" name="lname" />
+            <input id="lname" type="text" name="#" />
           </div>
           <div class="item">
             <label for="address">Address<span>*</span></label>
-            <input id="address" type="text"   name="address" />
+            <input id="address" type="text" name="#" />
           </div>
           <div class="item">
             <label for="zip">Post Code<span>*</span></label>
-            <input id="zip" type="text"   name="zip" required/>
+            <input id="zip" type="text" name="#" required/>
           </div>
           <div class="item">
             <label for="city">City<span>*</span></label>
-            <input id="city" type="text"   name="city" />
+            <input id="city" type="text" name="#" />
           </div>
           <div class="item">
             <label for="state">County<span>*</span></label>
-            <input id="state" type="text"   name="state" />
+            <input list="state" type="text" name="#" />
+            <datalist id="state">
+              <optgroup label="England">
+                  <option>Bedfordshire</option>
+                  <option>Berkshire</option>
+                  <option>Bristol</option>
+                  <option>Buckinghamshire</option>
+                  <option>Cambridgeshire</option>
+                  <option>Cheshire</option>
+                  <option>City of London</option>
+                  <option>Cornwall</option>
+                  <option>Cumbria</option>
+                  <option>Derbyshire</option>
+                  <option>Devon</option>
+                  <option>Dorset</option>
+                  <option>Durham</option>
+                  <option>East Riding of Yorkshire</option>
+                  <option>East Sussex</option>
+                  <option>Essex</option>
+                  <option>Gloucestershire</option>
+                  <option>Greater London</option>
+                  <option>Greater Manchester</option>
+                  <option>Hampshire</option>
+                  <option>Herefordshire</option>
+                  <option>Hertfordshire</option>
+                  <option>Isle of Wight</option>
+                  <option>Kent</option>
+                  <option>Lancashire</option>
+                  <option>Leicestershire</option>
+                  <option>Lincolnshire</option>
+                  <option>Merseyside</option>
+                  <option>Norfolk</option>
+                  <option>North Yorkshire</option>
+                  <option>Northamptonshire</option>
+                  <option>Northumberland</option>
+                  <option>Nottinghamshire</option>
+                  <option>Oxfordshire</option>
+                  <option>Rutland</option>
+                  <option>Shropshire</option>
+                  <option>Somerset</option>
+                  <option>South Yorkshire</option>
+                  <option>Staffordshire</option>
+                  <option>Suffolk</option>
+                  <option>Surrey</option>
+                  <option>Tyne and Wear</option>
+                  <option>Warwickshire</option>
+                  <option>West Midlands</option>
+                  <option>West Sussex</option>
+                  <option>West Yorkshire</option>
+                  <option>Wiltshire</option>
+                  <option>Worcestershire</option>
+              </optgroup>
+              <optgroup label="Wales">
+                  <option>Anglesey</option>
+                  <option>Brecknockshire</option>
+                  <option>Caernarfonshire</option>
+                  <option>Carmarthenshire</option>
+                  <option>Cardiganshire</option>
+                  <option>Denbighshire</option>
+                  <option>Flintshire</option>
+                  <option>Glamorgan</option>
+                  <option>Merioneth</option>
+                  <option>Monmouthshire</option>
+                  <option>Montgomeryshire</option>
+                  <option>Pembrokeshire</option>
+                  <option>Radnorshire</option>
+              </optgroup>
+              <optgroup label="Scotland">
+                  <option>Aberdeenshire</option>
+                  <option>Angus</option>
+                  <option>Argyllshire</option>
+                  <option>Ayrshire</option>
+                  <option>Banffshire</option>
+                  <option>Berwickshire</option>
+                  <option>Buteshire</option>
+                  <option>Cromartyshire</option>
+                  <option>Caithness</option>
+                  <option>Clackmannanshire</option>
+                  <option>Dumfriesshire</option>
+                  <option>Dunbartonshire</option>
+                  <option>East Lothian</option>
+                  <option>Fife</option>
+                  <option>Inverness-shire</option>
+                  <option>Kincardineshire</option>
+                  <option>Kinross</option>
+                  <option>Kirkcudbrightshire</option>
+                  <option>Lanarkshire</option>
+                  <option>Midlothian</option>
+                  <option>Morayshire</option>
+                  <option>Nairnshire</option>
+                  <option>Orkney</option>
+                  <option>Peeblesshire</option>
+                  <option>Perthshire</option>
+                  <option>Renfrewshire</option>
+                  <option>Ross-shire</option>
+                  <option>Roxburghshire</option>
+                  <option>Selkirkshire</option>
+                  <option>Shetland</option>
+                  <option>Stirlingshire</option>
+                  <option>Sutherland</option>
+                  <option>West Lothian</option>
+                  <option>Wigtownshire</option>
+              </optgroup>
+              <optgroup label="Northern Ireland">
+                  <option>Antrim</option>
+                  <option>Armagh</option>
+                  <option>Down</option>
+                  <option>Fermanagh</option>
+                  <option>Londonderry</option>
+                  <option>Tyrone</option>
+              </optgroup>
+            </datalist>
           </div>
           <div class="item">
             <label for="eaddress">Email Address<span>*</span></label>
-            <input id="eaddress" type="text"   name="eaddress" />
+            <input id="eaddress" type="text" name="email" />
           </div>
           <div class="item">
             <label for="phone">Phone<span>*</span></label>
-            <input id="phone" type="tel"   name="phone" />
+            <input id="phone" type="tel" name="phone_number" />
           </div>
       </fieldset>
 <br/>
@@ -342,35 +444,146 @@ ul li:hover{
         <div class="columns">
           <div class="item">
             <label for="fname">First Name<span>*</span></label>
-            <input id="fname" type="text" name="fname" />
+            <input id="fname" type="text" name="first_name" />
           </div>
           <div class="item">
             <label for="lname"> Last Name<span>*</span></label>
-            <input id="lname" type="text" name="lname" />
+            <input id="lname" type="text" name="last_name" />
           </div>
           <div class="item">
             <label for="address">Address<span>*</span></label>
-            <input id="address" type="text"   name="address" />
+            <input id="address" type="text" name="customer_address" />
           </div>
           <div class="item">
             <label for="zip">Post Code<span>*</span></label>
-            <input id="zip" type="text"   name="zip" required/>
+            <input id="zip" type="text" name="postcode" required/>
           </div>
           <div class="item">
             <label for="city">City<span>*</span></label>
-            <input id="city" type="text"   name="city" />
+            <input id="city" type="text" name="city" />
           </div>
           <div class="item">
             <label for="state">County<span>*</span></label>
-            <input id="state" type="text"   name="state" />
+            <input list="state" type="text" name="county" />
+            <datalist id="state">
+              <optgroup label="England">
+                  <option>Bedfordshire</option>
+                  <option>Berkshire</option>
+                  <option>Bristol</option>
+                  <option>Buckinghamshire</option>
+                  <option>Cambridgeshire</option>
+                  <option>Cheshire</option>
+                  <option>City of London</option>
+                  <option>Cornwall</option>
+                  <option>Cumbria</option>
+                  <option>Derbyshire</option>
+                  <option>Devon</option>
+                  <option>Dorset</option>
+                  <option>Durham</option>
+                  <option>East Riding of Yorkshire</option>
+                  <option>East Sussex</option>
+                  <option>Essex</option>
+                  <option>Gloucestershire</option>
+                  <option>Greater London</option>
+                  <option>Greater Manchester</option>
+                  <option>Hampshire</option>
+                  <option>Herefordshire</option>
+                  <option>Hertfordshire</option>
+                  <option>Isle of Wight</option>
+                  <option>Kent</option>
+                  <option>Lancashire</option>
+                  <option>Leicestershire</option>
+                  <option>Lincolnshire</option>
+                  <option>Merseyside</option>
+                  <option>Norfolk</option>
+                  <option>North Yorkshire</option>
+                  <option>Northamptonshire</option>
+                  <option>Northumberland</option>
+                  <option>Nottinghamshire</option>
+                  <option>Oxfordshire</option>
+                  <option>Rutland</option>
+                  <option>Shropshire</option>
+                  <option>Somerset</option>
+                  <option>South Yorkshire</option>
+                  <option>Staffordshire</option>
+                  <option>Suffolk</option>
+                  <option>Surrey</option>
+                  <option>Tyne and Wear</option>
+                  <option>Warwickshire</option>
+                  <option>West Midlands</option>
+                  <option>West Sussex</option>
+                  <option>West Yorkshire</option>
+                  <option>Wiltshire</option>
+                  <option>Worcestershire</option>
+              </optgroup>
+              <optgroup label="Wales">
+                  <option>Anglesey</option>
+                  <option>Brecknockshire</option>
+                  <option>Caernarfonshire</option>
+                  <option>Carmarthenshire</option>
+                  <option>Cardiganshire</option>
+                  <option>Denbighshire</option>
+                  <option>Flintshire</option>
+                  <option>Glamorgan</option>
+                  <option>Merioneth</option>
+                  <option>Monmouthshire</option>
+                  <option>Montgomeryshire</option>
+                  <option>Pembrokeshire</option>
+                  <option>Radnorshire</option>
+              </optgroup>
+              <optgroup label="Scotland">
+                  <option>Aberdeenshire</option>
+                  <option>Angus</option>
+                  <option>Argyllshire</option>
+                  <option>Ayrshire</option>
+                  <option>Banffshire</option>
+                  <option>Berwickshire</option>
+                  <option>Buteshire</option>
+                  <option>Cromartyshire</option>
+                  <option>Caithness</option>
+                  <option>Clackmannanshire</option>
+                  <option>Dumfriesshire</option>
+                  <option>Dunbartonshire</option>
+                  <option>East Lothian</option>
+                  <option>Fife</option>
+                  <option>Inverness-shire</option>
+                  <option>Kincardineshire</option>
+                  <option>Kinross</option>
+                  <option>Kirkcudbrightshire</option>
+                  <option>Lanarkshire</option>
+                  <option>Midlothian</option>
+                  <option>Morayshire</option>
+                  <option>Nairnshire</option>
+                  <option>Orkney</option>
+                  <option>Peeblesshire</option>
+                  <option>Perthshire</option>
+                  <option>Renfrewshire</option>
+                  <option>Ross-shire</option>
+                  <option>Roxburghshire</option>
+                  <option>Selkirkshire</option>
+                  <option>Shetland</option>
+                  <option>Stirlingshire</option>
+                  <option>Sutherland</option>
+                  <option>West Lothian</option>
+                  <option>Wigtownshire</option>
+              </optgroup>
+              <optgroup label="Northern Ireland">
+                  <option>Antrim</option>
+                  <option>Armagh</option>
+                  <option>Down</option>
+                  <option>Fermanagh</option>
+                  <option>Londonderry</option>
+                  <option>Tyrone</option>
+              </optgroup>
+            </datalist>
           </div>
           <div class="item">
             <label for="eaddress">Email Address<span>*</span></label>
-            <input id="eaddress" type="text"   name="eaddress" />
+            <input id="eaddress" type="text" name="customer_email" />
           </div>
           <div class="item">
             <label for="phone">Phone<span>*</span></label>
-            <input id="phone" type="tel"   name="phone" />
+            <input id="phone" type="tel"   name="customer_phone_number" />
           </div>
       </fieldset>
 
@@ -411,6 +624,30 @@ ul li:hover{
       <textarea id="instruction" rows="3"></textarea>
       </div>
       </fieldset>
+      {% for field in SenderForm %}
+      {% for error in field.errors %}
+      <p style="color:red">{{ error }}</p>
+      {% endfor %}
+    </p>
+    {% endfor %}
+    {% if SenderForm.non_field_errors %}
+    <div style="color: red">
+      <p>{{SenderForm.non_field_errors}}</p>
+    </div>
+
+    {% endif %}
+      {% for field in DeliveryForm %}
+      {% for error in field.errors %}
+      <p style="color:red">{{ error }}</p>
+      {% endfor %}
+    </p>
+    {% endfor %}
+    {% if DeliveryForm.non_field_errors %}
+    <div style="color: red">
+      <p>{{DeliveryForm.non_field_errors}}</p>
+    </div>
+
+    {% endif %}
       <div class="btn-block">
       <button type="submit" href="/">Submit</button>
       </div>
