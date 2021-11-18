@@ -1,9 +1,6 @@
 from django.db import models
 from django.conf import settings
-from django.utils import timezone
-from django.shortcuts import reverse
 from phonenumber_field.modelfields import PhoneNumberField
-from django.forms import ModelForm
 
 # Create your models here.
 class Item(models.Model):
@@ -29,7 +26,16 @@ class Sender(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
-    phoneNumber = PhoneNumberField(unique = True, null = False, blank = False)
+    phone_number = PhoneNumberField(unique = True, null = False, blank = False)
+
+    def __str__(self):
+        return self.name
+
+    def __str__(self):
+        return self.email
+
+    def __str__(self):
+        return self.phone_number
 
 class Receiver(models.Model):
     id = models.AutoField(primary_key=True)
