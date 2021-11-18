@@ -38,5 +38,5 @@ def Sender_details(request):
             #finally save the object in db
             obj.save()
     else:
-        form2 = SenderForm()
+        form = SenderForm()
     return render(request, "Booking.html", context)
