@@ -8,6 +8,9 @@ from django.http import HttpResponseRedirect, JsonResponse, FileResponse, Http40
 def Landing_Page(request):
     return render(request, 'Landing Page.html')
 
+def Landing_Test(request):
+    return render(request, 'Landing_test.html')
+
 def Booking_Page(request):
     # create a form instance and populate it with data from the request:
     form = BookingForm(request.POST)
@@ -35,5 +38,5 @@ def Booking_Page(request):
         # if a GET (or any other method) we'll create a blank form
     else:
         form = BookingForm()
-        
+
     return render(request, 'Booking.html', {'form': form})

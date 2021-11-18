@@ -135,7 +135,10 @@
       </div>
       <div class="col-xl-7 col-lg-5 col-md-8 " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
         <div class="banner-image-l-14">
-          <img src="{% static 'media/Trolley1.png' %}" alt="" class="w-100 mt-xl-n10">
+        <!--  <img src="{% static 'media/Box.png' %}" alt="" class="w-100 mt-xl-n10"> -->
+          <img class="mySlides" src="{% static 'media/Box.png' %}" style="width:100%">
+          <img class="mySlides" src="{% static 'media/Trolley1.png' %}" style="width:100%">
+          <img class="mySlides" src="{% static 'media/Box.png' %}" style="width:100%">
         </div>
       </div>
     </div>
@@ -346,6 +349,23 @@
             <script src="{% static 'js/menu.js' %}"></script>
             <!-- Activation Script -->
             <script src="{% static 'js/custom.js' %}"></script>
+
+            <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 6000); // Change image every 2 seconds
+}
+</script>
           </body>
 
           </html>
