@@ -12,3 +12,17 @@ class SenderForm(forms.ModelForm):
     class Meta:
         model = Sender
         fields = ('name','email','phone_number')
+
+class LoginForm(forms.ModelForm):
+
+    class Meta:
+        model = Login
+        fields = ('username','password')
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        try:
+           login = Login.objects.get(username=username)
+        except Exception as e:
+            return username
+        raise forms.ValidationError(f"Username {username} is already in use.")

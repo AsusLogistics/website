@@ -2,6 +2,11 @@ from django.db import models
 from django.conf import settings
 
 # Create your models here.
+
+class Login(models.Model):
+    username = models.CharField(max_length=12, null=True)
+    password = models.CharField(max_length=15, null=True)
+
 class Sender(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, null=True)

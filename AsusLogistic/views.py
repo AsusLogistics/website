@@ -1,9 +1,32 @@
 from django.shortcuts import render
 from .models import *
 from .forms import *
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 
 # Create your views here.
+
+def Login(request):
+    username = 'not logged in'
+    if request.method == 'POST':
+      MyLoginForm = LoginForm(request.POST)
+      if MyLoginForm.is_valid():
+         username = LoginForm.cleaned_data['username']
+         request.session['username'] = username
+      else:
+        MyLoginForm = LoginForm()
+        return HttpResponseRedirect('Menu')
+    return render(request, 'Login.html', {'username':username})
+
+def formView(request):
+   if request.session.has_key('username'):
+      username = request.session['username']
+      return render(request, 'loggedin.html', {"username" : username})
+   else:
+      return render(request, 'login.html', {})
+
+def Menu_Page(request):
+    return render(request, "Menu.html")
+
 def Landing_Page(request):
     return render(request, "Landing Page.html")
 

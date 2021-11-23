@@ -4,6 +4,10 @@ from .models import *
 # Register your models here.
 class AsusManagement(admin.ModelAdmin):
     pass
+admin.site.register(Login, AsusManagement)
+
+class AsusManagement(admin.ModelAdmin):
+    pass
 admin.site.register(Sender, AsusManagement)
 
 class DeliveryManagement(admin.ModelAdmin):
