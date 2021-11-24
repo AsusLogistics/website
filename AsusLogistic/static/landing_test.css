@@ -21,7 +21,12 @@ color: black !important;
 }
 
 
+.content.section-heading-8.text-lg-start.text-center{
+  text-align: center !important;
 
+
+
+}
 
 
 @media (min-width: 320px) {
@@ -29,6 +34,14 @@ color: black !important;
   {
     width:320px !important;
     z-index: 0;
+    text-align: center;
+
+  }
+  .column .column2 {
+
+    width: 100%;
+
+
   }
   }
   @media (min-width: 480px) {
@@ -41,8 +54,9 @@ color: black !important;
     @media (min-width: 920px) {
       .bg
       {
-        width:1300px !important;
+        width:1400px !important;
         z-index: 0;
+        height: 500px;
       }
       }
 
@@ -51,5 +65,39 @@ color: black !important;
         .content h1{
           padding-top: 0px;
           margin-top: -120px;
+
+        }
+        .column {
+
+          width: 20%;
+          float: left;
+          padding: 10px;
+          height: 170px; /* Should be removed. Only for demonstration */
+
+        }
+        .column2 {
+          width: 70%;
+          float: left;
+          padding: 10px;
+          height: 170px; /* Should be removed. Only for demonstration */
+
         }
         }
+.footersection p {
+  text-align: center;
+}
+
+
+.column2 p {
+font-size: 25px;
+
+}
+.column2 small {
+font-size: 15px;
+
+}
+
+.subcontent {
+  margin: 100px;
+
+}
