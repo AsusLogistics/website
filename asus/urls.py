@@ -18,12 +18,8 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from asus import settings
 from AsusLogistic import views
-from AsusLogistic.views import TestView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('AsusLogistic.urls')),   
-    path('TestView', TestView.as_view(), name='TestView'),
-    path('api-auth/', include('rest_framework.urls')),
-
+    path('', include('AsusLogistic.urls')),
 ]
