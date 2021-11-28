@@ -2,8 +2,21 @@ from django.shortcuts import render
 from .models import *
 from .forms import *
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from rest_framework.response import Response
+from rest_framework.views import APIView
+import json
+import requests
+from django.templatetags.static import static
 
 # Create your views here.
+
+class TestView(APIView):
+    def get(self, request, *args, **kwargs):
+        data = {
+            'name': 'nathan',
+            'age': 23
+        }
+        return Response(data)
 
 def Login(request):
     username = 'not logged in'
