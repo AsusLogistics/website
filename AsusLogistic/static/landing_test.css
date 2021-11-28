@@ -37,10 +37,14 @@ color: black !important;
     text-align: center;
 
   }
-  .column .column2 {
+  .column .column2  {
 
     width: 100%;
 
+
+  }
+  .column i {
+    padding-bottom: 15px;
 
   }
   }
