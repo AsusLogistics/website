@@ -31,6 +31,10 @@ def Menu_Page(request):
 def Landing_Page(request):
     return render(request, "Landing Page.html")
 
+def Index_Page(request):
+    return render(request, "index.html")
+
+
 context = {
     'DeliveryForm': DeliveryForm(),
     'SenderForm': SenderForm()
