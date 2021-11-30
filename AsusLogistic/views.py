@@ -62,7 +62,6 @@ def Booking_Page(request):
             obj.item_length = obj.item_length = form.cleaned_data['item_length']
             #finally save the object in db
             obj.save()
-        return HttpResponseRedirect('/')
     else:
         form = DeliveryForm()
     return render(request, "Booking.html", context)
