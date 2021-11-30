@@ -6,6 +6,9 @@ import json
 from django.templatetags.static import static
 
 # Create your views here.
+
+
+
 def Login(request):
     username = 'not logged in'
     if request.method == 'POST':
@@ -31,8 +34,8 @@ def Menu_Page(request):
 def Landing_Page(request):
     return render(request, "Landing Page.html")
 
-def Index_Page(request):
-    return render(request, "index.html")
+def Homepage(request):
+    return render(request, "Homepage.html")
 
 
 context = {
