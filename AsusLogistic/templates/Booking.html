@@ -248,7 +248,7 @@ ul li:hover{
 <!-- nav bar section -->
   <div class="container">
 <div class="logo">
-  <img class="logoimage" src="images/logo.png" alt="" height = "100" width="130"/>
+  <img class="logoimage" src="{% static 'media/images/logo.gif' %}" alt="" height = "100" width="130"/>
   </div>
 <nav>
   <ul>
@@ -278,15 +278,15 @@ ul li:hover{
           <label for="instruction">Item Dimensions e.g. Height, Width, and Length</label>
           <div class="row">
             <div class="column">
-              <input type="text" placeholder="Width "name="item_width"/>
+              <textarea placeholder="Width" rows="2" name="item_name"></textarea>
             </div>
 
               <div class="column">
-                <input type="text" placeholder="Height " name="item_height"/>
+                <textarea placeholder="Height" rows="2" name="item_name"></textarea>
             </div>
 
             <div class="column">
-              <input type="text" placeholder="Length " name="item_length"/>
+              <textarea placeholder="Length" rows="2" name="item_name"></textarea>
             </div>
           </div>
       </fieldset>
@@ -649,7 +649,7 @@ ul li:hover{
 
     {% endif %}
       <div class="btn-block">
-      <button type="submit" href="/">Submit</button>
+      <button type="submit" onclick="window.print()">Submit</button>
       </div>
     </form>
     </div>
