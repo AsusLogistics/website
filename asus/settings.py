@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AsusLogistic.apps.AsuslogisticConfig',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
