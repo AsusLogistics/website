@@ -40,6 +40,8 @@ def ExclusiveDeal49(request):
 def Homepage(request):
     return render(request, "Homepage.html")
 
+def TC(request):
+    return render(request, "tandc.html")
 
 context = {
     'DeliveryForm': DeliveryForm(),

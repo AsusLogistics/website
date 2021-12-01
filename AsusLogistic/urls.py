@@ -10,6 +10,8 @@ urlpatterns = [
    path('Booking', views.Booking_Page, name='Booking'),
    path('anythinganywhere', views.AnythingAnywhere, name='AnythingAnywhere'),
    path('exclusivedeal49', views.ExclusiveDeal49, name='ExclusiveDeal49'),
+   path('t&c', views.TC, name='t&c'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	</head>
+	<body>
+
+<div ng-if="UserInfo.approvedTermsAndConditions || !UserInfo.isAuthenticated">
+	<ncy-breadcrumb></ncy-breadcrumb>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<form name="tandc" ng-submit="approveTandC()">
+				<div class="panel panel-default" style="margin-top:20px;">
+					<div class="panel-body" style="max-height:600px; overflow-y:scroll; background-color:white;">
+						<div>
+							<h1 style="text-align:center;">Terms and Conditions</h1>
+							<ol style="margin-top:50px; margin-left:100px; margin-right:100px;">
+  						<li style="padding-bottom:20px;">We agree to collect and deliver small to medium sized goods for the whole month for a charge of £49.99 per month. Small goods are classed as a box, chair, car seat, pushchair, suitcase etc. Medium goods are classed as a 2-seater sofa, a bike, washing machine etc. There is a weight limit of 60 kilos and anything weighing more there will be an extra charge which you will be told about when booking the delivery. Please always make sure there is help to load and unload any heavy or awkward items.</li>
+	  					<li style="padding-bottom:20px;">We agree to store your goods for up to 3 days while the goods are in transit at no extra charge.</li>
+	  					<li style="padding-bottom:20px;">We agree to provide protective materials to make sure your goods are safe during transit at no extra charge.</li>
+							<li style="padding-bottom:20px;">FAIR USAGE POLICY – To allow fairness to all our members you can only make one booking at a time (one booking can consist of multiple items) and need to wait until it is completed before booking another delivery</li>
+							<li style="padding-bottom:20px;">We aim to collect and deliver your goods within 3 to 5 days from when you tell us about the delivery. In busy periods this may increase to 7 days </li>
+							<li style="padding-bottom:20px;">XMAS BONUS – Up until Christmas week starting 20th December your family and friends can use your membership to book deliveries. You are free to charge them for using your plan</li>
+							<li style="padding-bottom:20px;">There are additional charges for large items and you will always be told of these when booking. </li>
+							<li style="padding-bottom:20px;">The plan only covers deliveries as far north as Glasgow, Edinburgh and Dundee. Certain postcodes are not included and will incur an extra charge which you will be notified of when booking, these postcodes are SA, SY, LL, PL, TR, CT, NR and surrounding post codes. We will always notify you of any extra charges that you will incur at the outset to give you the choice of whether to proceed or not with the delivery.</li>
+						</ol>
+						</div>
+					</div>
+				</div>
+				<div style="text-align:center;" ng-if="settings.Authentication.RequireTermsAndConditions && !UserInfo.approvedTermsAndConditions && UserInfo.isAuthenticated">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+	</body>
+</html>

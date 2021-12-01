@@ -3381,3 +3381,10 @@ img.spin {
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
+.tc  {
+  color: black;
+
+}
+.tc:hover {
+  color: lightgrey;
+}
