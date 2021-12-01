@@ -31,8 +31,8 @@ def formView(request):
 def Menu_Page(request):
     return render(request, "Menu.html")
 
-def Landing_Page(request):
-    return render(request, "Landing Page.html")
+def AnythingAnywhere(request):
+    return render(request, "anythinganywhere.html")
 
 def Homepage(request):
     return render(request, "Homepage.html")
