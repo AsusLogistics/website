@@ -34,6 +34,9 @@ def Menu_Page(request):
 def AnythingAnywhere(request):
     return render(request, "anythinganywhere.html")
 
+def ExclusiveDeal49(request):
+    return render(request, "exclusivedeal49.html")
+
 def Homepage(request):
     return render(request, "Homepage.html")
 
