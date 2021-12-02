@@ -459,8 +459,9 @@
           </ul>
 
           <div class="copyright-text">
-            <p>Copyright &copy; 2020 Rashad Abdo</p>
+            <p>Copyright &copy; 2021 ASUS Logistics Ltd</p>
           </div>
+          <p> <a target="_blank" href="{% url 't&c' %}">Terms and Condition |</a> <a href="url">Privacy Policy</a></p>
         </div>
       </div>
 
@@ -477,10 +478,9 @@
           <div class="footer_menu">
             <h2>Quick Links</h2>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="index.html#Whatwedo">What We Do</a></li>
-              <li><a href="index.html#Contactus">Contact Us</a></li>
+              <li><a href="{% url 'Homepage' %}">Home</a></li>
+              <li><a href="{% url 'Homepage' %}#Whatwedo">What We Do</a></li>
+              <li><a href="{% url 'Homepage' %}#Contactus">Contact Us</a></li>
             </ul>
           </div>
         </div>
