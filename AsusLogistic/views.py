@@ -43,6 +43,12 @@ def Homepage(request):
 def TC(request):
     return render(request, "tandc.html")
 
+def TC1(request):
+    return render(request, "tandc1.html")
+
+def PP(request):
+    return render(request, "privacypolicy.html")
+
 context = {
     'DeliveryForm': DeliveryForm(),
     'SenderForm': SenderForm()

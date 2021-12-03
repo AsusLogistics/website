@@ -11,6 +11,8 @@ urlpatterns = [
    path('anythinganywhere', views.AnythingAnywhere, name='AnythingAnywhere'),
    path('exclusivedeal49', views.ExclusiveDeal49, name='ExclusiveDeal49'),
    path('t&c', views.TC, name='t&c'),
+   path('t&c1', views.TC1, name='t&c1'),  #anythinganywhere policy
+   path('pp', views.PP, name='pp'),
 
 ]
 
