@@ -18,8 +18,16 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from asus import settings
 from AsusLogistic import views
+from AsusLogistic.views import(
+    register_view,
+    login_view,
+    logout_view,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('AsusLogistic.urls')),
+    path('login/', login_view, name="login"),
+    path('logout/', logout_view, name="logout"),
+    path('register/', register_view, name="register"),
 ]

@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.asuslogistics.com']
 
+AUTH_USER_MODEL = 'AsusLogistic.Account'
+
+AUTHENTICATION_BACKENDS = [
+    #'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'AsusLogistic.backends.CaseInsensitiveModeBackend',
+]
 
 # Application definition
 
