@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+	</head>
+	<body style="margin-top:50px; margin-left:350px; margin-right:350px;">
+
+<div ng-if="UserInfo.approvedTermsAndConditions || !UserInfo.isAuthenticated">
+	<ncy-breadcrumb></ncy-breadcrumb>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<form name="tandc" ng-submit="approveTandC()">
+				<div class="panel panel-default" style="margin-top:20px;">
+					<div class="panel-body" style="max-height:600px; overflow-y:scroll; background-color:white;">
+						<div>
+							<img src="{% static 'media/logo.png' %}" height ="100px" alt="" class="light-version-logo" style="display: block; margin-left: auto; margin-right: auto;">
+							<h1 style="text-align:center;">Privacy Policy</h1>
+							<p>
+								<h3>How will we use the information
+								about you?</h3>
+								We collect information about you to process your order, manage your account and, if you agree, post offers of other products and services that we offer. We use your information collected from the website to personalise your repeat visits to the website.
+								 If you agree, we shall pass on your personal information to our group of companies so that they may offer you their products and services. We will not share your information for marketing purposes with companies outside of our group.
+							</p>
+	</body>
+</html>

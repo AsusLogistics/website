@@ -353,26 +353,28 @@
       <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
         <li>
           <img src="{% static 'media/images/happy_guy1.jpg' %}" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-          <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
-          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Salsbury Antiques Centre</h5>
-          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Business Woman - Salsbury, UK</small>
+          <p class="fs-110 font-cond-l" contenteditable="false">"Be patient because he cant always answer the phone whilst driving but when he does you will be glad you did because he offers a fast polite first class service .. top marks thanks will use again "</p>
+          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Mr Mussy</h5>
+          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Item- Exercise Bike</small>
         </li>
         <li>
           <img src="{% static 'media/images/happy_guy1.jpg' %}" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-          <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
-          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Salsbury Antiques Centre</h5>
-          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Business Woman - Salsbury, UK</small>
+          <p class="fs-110 font-cond-l" contenteditable="false">"First experience of arranging a collection and delivery of items bought on EBay and was very apprehensive. I needn't of been. Getting the quotes was easy. Communication with the companies before confirming was also useful and easy. The company I chose communicated with the seller and organised a convenient collection day and time with them and phoned me to confirm the arrangements and a convenient delivery day and time. Had a very good experience and wouldn't hesitate to use Shiply again."</p>
+          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Mr David D </h5>
+          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Item- 2 Vintage Farm chairs</small>
         </li>
         <li>
           <img src="{% static 'media/images/happy_guy1.jpg' %}" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-          <p class="fs-110 font-cond-l" contenteditable="false">" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. "</p>
-          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Salsbury Antiques Centre</h5>
-          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Fund Manager - Salsbury, UK</small>
+          <p class="fs-110 font-cond-l" contenteditable="false">"Good communication, Thank You..:)"</p>
+          <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Mr Gill </h5>
+          <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Item- 4 chairs</small>
         </li>
+
       </ul>
 
                     <a target="_blank" href="https://www.trustpilot.com/review/asuslogistics.com"> <h3>View More Reviews</h3></a>
-                  </div>
+
+    </div>
     </div>
   </section>
 
@@ -459,8 +461,9 @@
           </ul>
 
           <div class="copyright-text">
-            <p>Copyright &copy; 2020 Rashad Abdo</p>
+            <p>Copyright &copy; 2021 ASUS Logistics Ltd</p>
           </div>
+          <p> <a target="_blank" href="{% static 'media/t&c.pdf' %}">Terms and Condition |</a> <a href="{% url 'pp' %}">Privacy Policy</a></p>
         </div>
       </div>
 
@@ -470,17 +473,16 @@
             <h2>Contact Info</h2>
           </div>
           <address>
-            <p>01234 567890</p>
+            <p>01213143083</p>
             <p><a href="mailto:enquiries@asuslogistics.com">enquiries@asuslogistics.com</a></p>
           </address>
 
           <div class="footer_menu">
             <h2>Quick Links</h2>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="index.html#Whatwedo">What We Do</a></li>
-              <li><a href="index.html#Contactus">Contact Us</a></li>
+              <li><a href="{% url 'Homepage' %}">Home</a></li>
+              <li><a href="{% url 'Homepage' %}#Whatwedo">What We Do</a></li>
+              <li><a href="{% url 'Homepage' %}#Contactus">Contact Us</a></li>
             </ul>
           </div>
         </div>

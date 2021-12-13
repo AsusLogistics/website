@@ -1184,6 +1184,7 @@ https://templatemo.com/tm-516-known
       display: block;
       padding: 0;
       margin: 0 auto;
+
   }
 
   @media (min-width: 768px){
@@ -1313,5 +1314,5 @@ https://templatemo.com/tm-516-known
 
   .trustpilot {
     text-align: center;
-    border: 3px solid grey;
+    /*border: 3px solid grey;*/
   }
