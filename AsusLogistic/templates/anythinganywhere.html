@@ -126,26 +126,6 @@
           <h1>The Anything Anywhere Plan For Only £49.99<small>per/month</small></h1><h60><a target="_blank" href="{% url 't&c1' %}" class="tc">Terms and Conditions Apply</a></h60>
           <p> Get unlimited deliveries for the price of one. We deal with ebay, amazon, facebook marketplace, gumtree, and a host of other online services as well as your high street deliveries</p>
           <div id="paypal-button-container-P-19573805F0426720DMGCRGCA"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=Afdwp58_6daFCjcSPv3QAcKEaTTfCU2fYHPz_pCUq91BhayUOSuDHLBEQk-oUl8qV9ZE4zU4MkEK2pMY&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-19573805F0426720DMGCRGCA'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-19573805F0426720DMGCRGCA'); // Renders the PayPal button
-</script>
         </div>
       </div>
       <div class="col-xl-7 col-lg-5 col-md-8 " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
@@ -340,6 +320,19 @@
 
 
 </section>
+<hr class="hr-line">
+
+<div class="content section-heading-8 text-lg-start text-center">
+<div class="d-flex justify-content-center">
+<h3>Subscribe Now For Only £49.99 <small>pm</small></h3>
+</div>
+<div id="paypal-button-container-P-19573805F0426720DMGCRGCB"></div>
+
+</div>
+
+
+
+
 <!-- Footer Area -->
 <footer class="footer-area-l-12 position-relative">
   <div class="footersection">
@@ -350,6 +343,46 @@
 <!-- SCRIPTS -->
 <script src="{% static 'js/homejs/faq.js' %}"></script>
 <script src="//code.tidio.co/ullomih3xdlzxooimhv74srkelszgdfj.js" async></script>
+<script src="https://www.paypal.com/sdk/js?client-id=Afdwp58_6daFCjcSPv3QAcKEaTTfCU2fYHPz_pCUq91BhayUOSuDHLBEQk-oUl8qV9ZE4zU4MkEK2pMY&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-19573805F0426720DMGCRGCA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-19573805F0426720DMGCRGCA'); // Renders the PayPal button
+</script>
+
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-19573805F0426720DMGCRGCA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-19573805F0426720DMGCRGCB'); // Renders the PayPal button
+</script>
 </body>
 
 </html>
