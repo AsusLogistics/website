@@ -1,99 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'menu.css' %}">
 
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: lightgrey url("") no-repeat fixed center;
-
-}
-
-.menu_border{
-
-  padding: 20px;
-  margin: 20px;
-  border: 20px;
-}
-.menu_border h1 {
-  text-align: center;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  margin: 5px;
-  width: 30.33%;
-  float: left;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
-   border-radius: 25px;
-}
-.column:hover {
-  background: #109bea !important;
-}
-
-.column h2 {
-  text-align: center;
-}
-.column .logoimage {
-  text-align: center;
-
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-/*  border-style: solid;
- border-color: coral; */
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row {
-  width: 100%;
-}
-
-*{transition:all 0.3s ease-in-out;}
-
-.container{
-  clear:both;
-  overflow:auto;
-}
-
-nav{float:right;}
-
-.logo img{float:left;}
-
-ul li{
-  display: inline-block; padding:10px;
-  font-size:20px; font-family:raleway;
-}
-
-ul li:hover{
-  color:#109bea;
-
-img.logoimage {
-  padding-left: 500px !important;
-}
-
-
-
-</style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRSXNWXNHT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZRSXNWXNHT');
 </script>
 </head>
@@ -105,10 +22,10 @@ img.logoimage {
   </div>
 <nav>
   <ul>
-  <li>Home</li>
-  <li>Book a job</li>
-  <li>Current Deliveries</li>
-  <li>logout</li>
+  <a class="button" href="#">Home</button>
+  <a class="button" href="#">Book a job</button>
+  <a class="button" href="#">Current Deliveries</button>
+  <a class="button" href="{% url 'logout' %}">Logout</a>
   </ul>
   </nav>
 </div>
