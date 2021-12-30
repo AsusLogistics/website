@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'menu.css' %}">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRSXNWXNHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZRSXNWXNHT');
+</script>
+</head>
+<body>
+<!-- nav bar section -->
+  <div class="container">
+<div class="logo">
+  <img class="logoimage" src="images/logo.png" alt="" height = "100" width="130"/>
+  </div>
+<nav>
+  <ul>
+  <a class="button" href="#">Home</button>
+  <a class="button" href="#">Book a job</button>
+  <a class="button" href="#">Current Deliveries</button>
+  <a class="button" href="{% url 'logout' %}">Logout</a>
+  </ul>
+  </nav>
+</div>
+<hr />
+
+<!-- MENU SECTIONS -->
+
+<div class="menu_border">
+  <h1>Menu Option</h1>
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>Book a job</h2>
+    <img src="images/book.svg" height="100" width="100" />
+
+  </div>
+  <a href="active.html">
+    <div class="column" style="background-color:#ccc;">
+    <h2>Active Deliveries</h2>
+    <img src="images/active.svg" height="100" width="100" />
+
+  </div></a>
+  <a href="past.html">
+  <div class="column" style="background-color:#ccc;">
+    <h2>Past Deliveries</h2>
+    <img src="images/Past.svg" height="100" width="100" />
+
+  </div></a>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>Account Management</h2>
+    <img src="images/setting.svg" height="100" width="100" />
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Help</h2>
+    <img src="images/help.svg" height="100" width="100" />
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Contact Us</h2>
+    <img src="images/message.svg" height="100" width="100" />
+
+  </div>
+</div>
+</div>
+
+
+<footer>
+	<p>Copyright &copy; 2021 ASUS Logistics Ltd</p>
+</footer>
+</body>
+
+</html>
