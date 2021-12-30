@@ -16,10 +16,6 @@ admin.site.register(Account, AccountAdmin)
 
 class AsusManagement(admin.ModelAdmin):
     pass
-admin.site.register(Login, AsusManagement)
-
-class AsusManagement(admin.ModelAdmin):
-    pass
 admin.site.register(Sender, AsusManagement)
 
 class DeliveryManagement(admin.ModelAdmin):

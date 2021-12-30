@@ -23,28 +23,28 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG_SETTING')
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.asuslogistics.com']
 
-AUTH_USER_MODEL = 'AsusLogistic.Account'
+AUTH_USER_MODEL = 'account.Account'
 
 AUTHENTICATION_BACKENDS = [
-    #'django.contrib.auth.backends.ModelBackend',
     'django.contrib.auth.backends.AllowAllUsersModelBackend',
-    'AsusLogistic.backends.CaseInsensitiveModeBackend',
+    'account.backends.CaseInsensitiveModeBackend',
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'account',
+    'AsusLogistic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AsusLogistic.apps.AsuslogisticConfig',
 ]
 
 MIDDLEWARE = [
