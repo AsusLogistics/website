@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from asus import settings
 from AsusLogistic import views
-from AsusLogistic.views import(
+from account.views import(
     register_view,
     login_view,
     logout_view,
