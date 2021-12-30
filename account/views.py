@@ -70,24 +70,3 @@ def get_redirect_if_exists(request):
         if request.GET.get("next"):
             redirect = str(request.Get.get("next"))
     return redirect
-
-def Menu_Page(request):
-    return render(request, "Menu.html")
-
-def AnythingAnywhere(request):
-    return render(request, "anythinganywhere.html")
-
-def ExclusiveDeal49(request):
-    return render(request, "exclusivedeal49.html")
-
-def Homepage(request):
-    return render(request, "Homepage.html")
-
-def TC(request):
-    return render(request, "tandc.html")
-
-def TC1(request):
-    return render(request, "tandc1.html")
-
-def PP(request):
-    return render(request, "privacypolicy.html")

@@ -29,7 +29,7 @@ def PP(request):
 
 context = {
     'DeliveryForm': DeliveryForm(),
-    'SenderForm': SenderForm()
+    'SenderForm': SenderForm(),
 }
 
 def Booking_Page(request):
